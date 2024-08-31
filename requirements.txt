@@ -1,5 +1,4 @@
 gunicorn==20.1.0
-pyaudio==0.2.11
 adal==1.2.7
 asttokens==2.2.1
 async-generator==1.10
