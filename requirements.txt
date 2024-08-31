@@ -68,7 +68,6 @@ prompt-toolkit==3.0.38
 protobuf==3.20.3
 psutil==5.9.5
 pure-eval==0.2.2
-PyAudio==0.2.14
 pycparser==2.21
 pygame==2.4.0
 Pygments==2.15.1
