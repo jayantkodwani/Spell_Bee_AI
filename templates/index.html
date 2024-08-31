@@ -11,9 +11,11 @@
     <p id="wordPrompt"></p>
     <p id="userResponse"></p>
     <p id="feedback"></p>
+    <p id="continuePrompt"></p>
+    <button id="continuePractice" style="display:none;">Continue Practice</button>
 
     <script>
-        document.getElementById('startPractice').addEventListener('click', function() {
+        function startPractice() {
             fetch('/get_word')
                 .then(response => response.json())
                 .then(data => {
@@ -52,6 +54,10 @@
                         // Use TTS to provide feedback
                         const feedbackUtterance = new SpeechSynthesisUtterance(feedbackText);
                         window.speechSynthesis.speak(feedbackUtterance);
+
+                        // Ask if the user wants to continue
+                        document.getElementById('continuePrompt').textContent = 'Would you like to continue the practice?';
+                        document.getElementById('continuePractice').style.display = 'inline';
                     };
 
                     recognition.onspeechend = () => {
@@ -62,6 +68,18 @@
                         document.getElementById('feedback').textContent = 'Error occurred in recognition: ' + event.error;
                     };
                 });
+        }
+
+        document.getElementById('startPractice').addEventListener('click', function() {
+            document.getElementById('continuePrompt').textContent = '';
+            document.getElementById('continuePractice').style.display = 'none';
+            startPractice();
+        });
+
+        document.getElementById('continuePractice').addEventListener('click', function() {
+            document.getElementById('continuePrompt').textContent = '';
+            document.getElementById('continuePractice').style.display = 'none';
+            startPractice();
         });
     </script>
 </body>
