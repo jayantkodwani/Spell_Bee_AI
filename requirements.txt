@@ -78,7 +78,6 @@ pyOpenSSL==23.2.0
 pyparsing==3.0.9
 PyPDF2==3.0.1
 pypdfium2==4.30.0
-pypiwin32==223
 PySocks==1.7.1
 pytesseract==0.3.10
 pytest==7.4.4
