@@ -1,10 +1,6 @@
 from flask import Flask, render_template, jsonify
 import random
 
-from flask_talisman import Talisman
-Talisman()
-
-
 app = Flask(__name__)
 
 # List of words for the spelling bee practice
