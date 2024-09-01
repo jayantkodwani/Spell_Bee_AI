@@ -82,7 +82,8 @@
 
                                 let feedbackText;
                                 if (normalizedUserSpelling === normalizedWord) {
-                                    feedbackText = 'Correct!';
+                                    feedbackText = 'Correct! Its '+ word;
+                                    document.getElementById('feedback').textContent = feedbackText
                                     const feedbackUtterance = new SpeechSynthesisUtterance(feedbackText);
                                     feedbackUtterance.onend = enableContinueButton;
                                     window.speechSynthesis.speak(feedbackUtterance);
