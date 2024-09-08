@@ -4,7 +4,7 @@ import random
 app = Flask(__name__)
 
 # List of words for the spelling bee practice
-word_list = ["ship", "tank"]
+word_list = ["ship", "tank","egg","escalator","lion","apple","speech","trophy","dubai","triumph","television","phone","mobile","toy","tower","car","bike","hut","school","cycle","cat","tiger","play","plant","google","block","pizza","burger","tea","glass","wood","lamp","lego","cop","book","pen","blanket","puzzle"]
 
 # Route to serve the web page
 @app.route('/')
