@@ -28,3 +28,9 @@ p {
             font-size: 12px;   
             margin-top: 5px;   
   }
+
+.container {
+            padding: 20px;
+            max-width: 1200px; /* Limit max width on large screens */
+            margin: 0 auto; /* Center on larger screens */
+        }
