@@ -36,3 +36,9 @@ p {
             max-width: 1200px; /* Limit max width on large screens */
             margin: 0 auto; /* Center on larger screens */
         }
+
+ @media (max-width: 768px) {
+            .container {
+                padding: 10px; /* Reduce padding on smaller screens */
+            }
+        }
